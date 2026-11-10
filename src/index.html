@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spark Tasks</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Top bar: app name and the three filter buttons. -->
+  <header class="topbar">
+    <h1>Spark Tasks</h1>
+    <nav aria-label="Filter tasks">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="open">Open</button>
+      <button class="filter" data-filter="done">Done</button>
+      <!-- New on Day 5: downloads every task as a JSON file. -->
+      <button id="export" class="filter">Export JSON</button>
+    </nav>
+  </header>
+
+  <main class="layout">
+    <!-- Card 1: the form that creates a task. -->
+    <section class="card" aria-labelledby="new-task-heading">
+      <h2 id="new-task-heading">Add a task</h2>
+      <!-- novalidate: the app shows its own error messages instead of the
+           browser's pop-ups, so they look the same in every browser. -->
+      <form id="task-form" novalidate>
+        <label for="title">Task title</label>
+        <input id="title" name="title" type="text" maxlength="200"
+               placeholder="e.g. Finish Day 3 practical">
+        <div class="row">
+          <div>
+            <label for="priority">Priority</label>
+            <select id="priority" name="priority">
+              <option value="low">Low</option>
+              <option value="medium" selected>Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+          <div>
+            <label for="dueDate">Due date</label>
+            <input id="dueDate" name="dueDate" type="date">
+          </div>
+        </div>
+        <p id="form-errors" class="errors" role="alert"></p>
+        <button type="submit" class="primary">Add task</button>
+      </form>
+    </section>
+
+    <!-- Card 2: counts, filled in by app.js. -->
+    <section class="card" aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Summary</h2>
+      <dl class="stats" id="stats"></dl>
+    </section>
+
+    <!-- Card 3: the task list, or the empty-state message. -->
+    <section class="card wide" aria-labelledby="list-heading">
+      <h2 id="list-heading">Your tasks</h2>
+      <p id="empty" class="empty">No tasks yet. Add your first task to get started.</p>
+      <ul id="task-list" class="task-list"></ul>
+    </section>
+  </main>
+
+  <!-- type="module" lets app.js import functions from tasks.js. -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>

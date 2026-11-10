@@ -1,0 +1,11 @@
+{
+  "name": "spark-tasks",
+  "version": "1.0.0",
+  "description": "Milestone 1 – Personal Productivity App (From Spark to Summit)",
+  "type": "module",
+  "scripts": {
+    "start": "npx --yes serve src -l 5500",
+    "test": "node --test --test-reporter=spec",
+    "digest": "node tools/weekly-digest.js"
+  }
+}

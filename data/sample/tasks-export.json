@@ -1,0 +1,8 @@
+[
+  {"id":"a1","title":"Submit Day 4 PRD","priority":"high","status":"todo","dueDate":"2026-11-10","createdAt":"2026-11-03T09:00:00.000Z"},
+  {"id":"a2","title":"Revise CSS grid notes","priority":"medium","status":"in-progress","dueDate":"2026-11-12","createdAt":"2026-11-03T09:05:00.000Z"},
+  {"id":"a3","title":"Pay hostel fee","priority":"high","status":"todo","dueDate":"2026-11-06","createdAt":"2026-11-01T10:00:00.000Z"},
+  {"id":"a4","title":"Plan portfolio website","priority":"high","status":"todo","dueDate":"","createdAt":"2026-11-02T08:00:00.000Z"},
+  {"id":"a5","title":"Install VS Code extensions","priority":"low","status":"done","dueDate":"2026-11-04","createdAt":"2026-11-02T08:30:00.000Z"},
+  {"id":"a6","title":"Read about localStorage","priority":"low","status":"todo","dueDate":"2026-11-20","createdAt":"2026-11-04T12:00:00.000Z"}
+]
